@@ -1,4 +1,3 @@
-````
 <div align="center">
 
 # 🍽️ Gourmet Dining LLC
@@ -30,7 +29,7 @@
 
 </div>
 
----
+
 
 # 📋 Table of Contents
 
@@ -52,7 +51,6 @@
 - [📎 Appendix](#-appendix)
 - [🚀 Future Improvements](#-future-improvements)
 
----
 
 # 👥 Team Information
 
@@ -69,7 +67,6 @@
 > 📚 **Project:** Project 1
 > 👥 **Team:** Akbar_Team
 
----
 
 # 📌 Project Overview
 
@@ -87,13 +84,12 @@ The project uses transactional and operational data to investigate:
 
 The main objective is to transform raw restaurant transaction data into **actionable business insights** using **Python, Pandas and PostgreSQL**.
 
----
 
 # 🎯 Project Objectives
 
 The project focuses on three major operational areas:
 
-```text
+
 ┌─────────────────────────────────────────────────────────┐
 │                 GOURMET DINING ANALYTICS                │
 ├─────────────────────────────────────────────────────────┤
@@ -108,9 +104,7 @@ The project focuses on three major operational areas:
 │   └── Identify high-performing products & peak hours    │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
-````
 
----
 
  # ❓ Key Questions
 
@@ -130,7 +124,6 @@ The project focuses on three major operational areas:
 
  > How does order-processing efficiency vary across staff members and shifts?
 
----
 
  # 📊 Dataset Information
 
@@ -162,7 +155,6 @@ The project focuses on three major operational areas:
 - 📂 Menu Categories
 - ⏱️ Order Processing Time
 
----
 
  # 💡 Expected Insights
 
@@ -178,13 +170,11 @@ The project focuses on three major operational areas:
 | 📊 Management | Daily operational KPIs |
 | 🚨 Bottlenecks | Areas requiring optimization |
 
----
 
  # 🛠️ Data Preparation
 
  ## 1\. 📥 Loading the Dataset
 
-```
 import pandas as pd
 
 # Load dataset exported from PostgreSQL
@@ -192,15 +182,12 @@ df = pd.read_csv("gourmet_dining_orders.csv")
 
 print(df.head())
 print(df.info())
-```
 
----
 
  ## 2\. 🧹 Data Cleaning
 
  The dataset was cleaned to improve analytical reliability.
 
-```
 # Remove duplicate records
 df = df.drop_duplicates()
 
@@ -226,7 +213,6 @@ df["table_number"] = df["table_number"].astype(int)
 
  ### 🧹 Data Cleaning Workflow
 
-```
 Raw Data
    │
    ▼
@@ -243,15 +229,12 @@ Convert Data Types
    │
    ▼
 Clean Analytical Dataset
-```
 
----
 
  # ⚙️ Feature Engineering
 
  Additional analytical features were created from the original dataset.
 
-```
 # Extract order hour
 df["order_hour"] = df["order_timestamp"].dt.hour
 
@@ -259,7 +242,6 @@ df["order_hour"] = df["order_timestamp"].dt.hour
 df["is_sub_second_sync"] = (
     df["kitchen_sync_delay_sec"] < 1.0
 )
-```
 
  ### 📌 Created Features
 
@@ -268,7 +250,6 @@ df["is_sub_second_sync"] = (
 | `order_hour` | Identify peak operating hours |
 | `is_sub_second_sync` | Measure KDS SLA compliance |
 
----
 
  # 📈 Data Analysis
 
@@ -276,21 +257,17 @@ df["is_sub_second_sync"] = (
 
  Orders exceeding the 1-second target are identified using:
 
-```
 slow_sync_orders = df[
     df["kitchen_sync_delay_sec"] >= 1.0
 ]
 
 print(slow_sync_orders)
-```
 
----
 
  ## 👥 Staff Performance Analysis
 
  Average order processing time is calculated for each staff member:
 
-```
 staff_performance = (
     df.groupby("staff_id")[
         "order_processing_time_min"
@@ -304,13 +281,10 @@ staff_performance = staff_performance.sort_values(
 )
 
 print(staff_performance)
-```
 
----
 
  # 🍕 Menu Performance Analysis
 
-```
 item_analytics = (
     df.groupby("item_name")
     .agg(
@@ -324,7 +298,6 @@ item_analytics = (
 )
 
 print(item_analytics.head(10))
-```
 
  ### 📊 Metrics
 
@@ -334,13 +307,11 @@ print(item_analytics.head(10))
 - 📈 Revenue contribution
 - 📊 Menu category performance
 
----
 
  # 🕐 Peak Hours Analysis
 
  Order timestamps are transformed into hourly data:
 
-```
 hourly_orders = (
     df.groupby("order_hour")
     .agg(
@@ -354,15 +325,12 @@ hourly_orders = (
 )
 
 print(hourly_orders)
-```
 
----
 
  # 📑 Pivot Table Analysis
 
  Revenue can be analyzed by operating hour and menu category.
 
-```
 sales_pivot = pd.pivot_table(
     df,
     values="total_amount",
@@ -373,11 +341,9 @@ sales_pivot = pd.pivot_table(
 )
 
 print(sales_pivot)
-```
 
  ### 📊 Analytical Structure
 
-```
                  MENU CATEGORY
               ┌────┬────┬────┬────┐
               │ A  │ B  │ C  │ D  │
@@ -389,15 +355,12 @@ print(sales_pivot)
 │ 20:00       │ $  │ $  │ $  │ $  │
 └─────────────┴────┴────┴────┴────┘
              ORDER HOUR
-```
 
----
 
  # 🎯 KPI Evaluation
 
  ## ⚡ KDS SLA Compliance
 
-```
 sub_sec_percentage = (
     df["is_sub_second_sync"].mean() * 100
 )
@@ -406,7 +369,6 @@ print(
     f"Percentage of orders synchronized "
     f"in < 1 second: {sub_sec_percentage:.2f}%"
 )
-```
 
  ### KPI Formula
 
@@ -417,7 +379,6 @@ SLA\ Compliance =
 \times 100
 $$
 
----
 
  # 🔍 Key Results
 
@@ -429,7 +390,6 @@ $$
 
  of analyzed orders were synchronized with the Kitchen Display System in under **1 second**.
 
-```
 SLA TARGET
 < 1.0 sec
 
@@ -437,9 +397,7 @@ SLA TARGET
 │██████████████████████████████████████░░░│
 │                 96.4%                    │
 └──────────────────────────────────────────┘
-```
 
----
 
  ## 🕒 Peak Operating Hours
 
@@ -453,7 +411,6 @@ SLA TARGET
 
  These periods represent the main operating windows requiring careful staffing and workflow planning.
 
----
 
  ## 🍕 Menu Performance
 
@@ -463,7 +420,6 @@ SLA TARGET
 
  This indicates that a relatively small group of menu items contributes a large share of overall sales revenue.
 
----
 
  # 📊 KPI Dashboard
 
@@ -475,7 +431,6 @@ SLA TARGET
 | 📦 Dataset Size | — | **12,500 rows** | 🔵 Analyzed |
 | 🐍 Data Analysis | Pandas | **Completed** | 🟢 Done |
 
----
 
  # 💼 Business Impact
 
@@ -488,7 +443,6 @@ SLA TARGET
 - Managers
 - Order-processing resources
 
----
 
  ## ⚡ KDS Optimization
 
@@ -499,7 +453,6 @@ SLA TARGET
 - Server synchronization
 - Order transmission workflow
 
----
 
  ## 🍕 Menu Management
 
@@ -510,7 +463,6 @@ SLA TARGET
 - Category revenue
 - Customer demand patterns
 
----
 
  ## 📊 Management Reporting
 
@@ -522,11 +474,8 @@ SLA TARGET
 - Menu performance
 - Operational KPIs
 
----
 
  # 🔄 Project Workflow
-
-```
                     ┌──────────────────┐
                     │ PostgreSQL Data  │
                     └────────┬─────────┘
@@ -564,9 +513,7 @@ SLA TARGET
                     ┌──────────────────┐
                     │ Business Insights│
                     └──────────────────┘
-```
 
----
 
  # 🧰 Technology Stack
 
@@ -579,7 +526,6 @@ SLA TARGET
 | 🕐 **Datetime** | Time-based analysis |
 | 📈 **KPI Analytics** | Performance measurement |
 
----
 
  # 📅 Project Timeline
 
@@ -592,7 +538,6 @@ SLA TARGET
 | **Week 5** | 05 Oct – 13 Oct | Final report and presentation preparation | ✅ |
 | 🎓 **Final Presentation** | **14 Oct** | Project presentation | 🎯 |
 
----
 
  # 🎓 Project Outcomes
 
@@ -600,7 +545,7 @@ SLA TARGET
 
  The project provided practical experience in connecting:
 
-```
+
 Business Requirements
         ↓
 Database Data
@@ -612,7 +557,7 @@ Data Analysis
 KPI Calculation
         ↓
 Business Insights
-```
+
 
  ### Main Learning Areas
 
@@ -626,45 +571,43 @@ Business Insights
 - Calculating operational KPIs
 - Translating analytical results into business insights
 
----
 
  # 🐍 Pandas Skills Developed
 
  ### 🔹 Data Manipulation
 
-```
 df.drop_duplicates()
 df.dropna()
 df.groupby()
 df.sort_values()
-```
+
 
  ### 🔹 Data Transformation
 
-```
+
 pd.to_datetime()
 df.astype()
 df.dt.hour
-```
+
 
  ### 🔹 Analytical Operations
 
-```
+
 df.groupby()
 pd.pivot_table()
 .agg()
 .mean()
 .sum()
 .count()
-```
 
----
+
+
 
  # 📊 Automated Executive Report
 
  The project includes a function for generating a daily management summary.
 
-```
+
 def generate_daily_report(dataframe):
     """
     Generate an aggregated daily executive
@@ -681,7 +624,7 @@ def generate_daily_report(dataframe):
     )
 
     return summary
-```
+
 
  ### Example Output
 
@@ -691,7 +634,7 @@ def generate_daily_report(dataframe):
 | 2025-09-08 | — | — | — |
 | 2025-09-09 | — | — | — |
 
----
+
 
  # 📝 Conclusion
 
@@ -713,7 +656,7 @@ def generate_daily_report(dataframe):
 
  The project demonstrates the complete process of transforming raw transactional data into structured KPIs and operational insights using **PostgreSQL and Pandas**.
 
----
+
 
  # 📚 References
 
@@ -730,13 +673,13 @@ def generate_daily_report(dataframe):
  - Pandas Documentation
 - PostgreSQL Documentation
 
----
+
 
  # 📎 Appendix
 
  ## 📁 Recommended Project Structure
 
-```
+
 Gourmet-Dining-Analytics/
 │
 ├── 📄 README.md
@@ -761,9 +704,9 @@ Gourmet-Dining-Analytics/
 │   └── kds_latency.png
 │
 └── 📄 requirements.txt
-```
 
----
+
+
 
  # 🚀 Future Improvements
 
@@ -778,7 +721,7 @@ Gourmet-Dining-Analytics/
 - ☁️ Cloud-based data pipeline
 - 📱 Real-time management dashboard
 
----
+
 
  # ⭐ Project Highlights
 
@@ -788,7 +731,7 @@ Gourmet-Dining-Analytics/
 | Records | \< 1 sec | \< 15 min | Top 20% Items |
 
 \</div\>
----
+
 
  \<div align="center"\> # 🍽️ Gourmet Dining LLC
 
