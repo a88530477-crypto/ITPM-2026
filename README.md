@@ -95,7 +95,7 @@ The main objective is to transform raw restaurant transaction data into **action
 
 The project focuses on three major operational areas:
 
-
+text
 ┌─────────────────────────────────────────────────────────┐
 │                 GOURMET DINING ANALYTICS                │
 ├─────────────────────────────────────────────────────────┤
