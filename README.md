@@ -75,11 +75,17 @@
 The project uses transactional and operational data to investigate:
 
 - 🍽️ Restaurant order performance
+- 
 - ⚡ Kitchen Display System (KDS) synchronization
+- 
 - 🕒 Order processing time
+- 
 - 👨‍🍳 Staff performance
+- 
 - 💰 Menu item revenue
+- 
 - 📊 Peak operating hours
+- 
 - 🔄 Table and order workflow efficiency
 
 The main objective is to transform raw restaurant transaction data into **actionable business insights** using **Python, Pandas and PostgreSQL**.
