@@ -4,10 +4,15 @@
 - Team Name: Akbar_Team
 - Team Members (Name / Student ID / Role):
  > Leader Name: Majitov Akbarjon,  Student ID:202490185, Group: I24A,  Role: Leader,  Phone Number: +998(95)010-71-54
+
  > Member Name 1:                ,  Student ID:           , Group: I24A, Role: 
+
  > Member Name 2:                ,  Student ID:           , Group: I24A, Role:  
+
  > Member Name 3:                ,  Student ID:           , Group, Role: 
+ 
  > Member Name 4:                ,  Student ID:           , Group:, Role: 
+ 
  > Member Name 5:                ,  Student ID:           , Group: Role: 
 
 ```markdown
