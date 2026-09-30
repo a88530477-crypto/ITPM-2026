@@ -226,9 +226,6 @@ print(df.head())
 print(df.info())
 
 
- Да. У тебя проблема в том, что часть Markdown-кода потеряла тройные обратные кавычки \`\`\` — поэтому GitHub пытается интерпретировать Python и ASCII-схемы как обычный текст. Также в конце сломаны HTML-теги.
-
- Ниже даю **полностью исправленную версию этого блока**. Её можно прямо заменить в `README.md`.
 
 
 ## 2. 🧹 Data Cleaning
@@ -261,43 +258,85 @@ df["order_timestamp"] = pd.to_datetime(
 df["table_number"] = df["table_number"].astype(int)
 
 
- ### 🧹 Data Cleaning Workflow
 
 
-┌─────────────────────────────┐
-│         📥 Raw Data         │
-└──────────────┬──────────────┘
+### 🧹 Data Cleaning Workflow
+
+
+┌──────────────────────────────┐
+│         📥 RAW DATA          │
+└──────────────┬───────────────┘
                │
                ▼
-┌─────────────────────────────┐
-│     🔄 Remove Duplicates    │
-└──────────────┬──────────────┘
+┌──────────────────────────────┐
+│    🔄 Remove Duplicates      │
+└──────────────┬───────────────┘
                │
                ▼
-┌─────────────────────────────┐
-│   🧹 Handle Missing Values  │
-└──────────────┬──────────────┘
+┌──────────────────────────────┐
+│    🧹 Handle Missing Values  │
+└──────────────┬───────────────┘
                │
                ▼
-┌─────────────────────────────┐
-│   ✅ Validate Required Data  │
-└──────────────┬──────────────┘
+┌──────────────────────────────┐
+│    ✅ Validate Required Data │
+└──────────────┬───────────────┘
                │
                ▼
-┌─────────────────────────────┐
-│    🔧 Convert Data Types    │
-└──────────────┬──────────────┘
+┌──────────────────────────────┐
+│     🔧 Convert Data Types    │
+└──────────────┬───────────────┘
                │
                ▼
-┌─────────────────────────────┐
-│  📊 Clean Analytical Data   │
-└─────────────────────────────┘
+┌──────────────────────────────┐
+│   📊 Clean Analytical Data   │
+└──────────────────────────────┘
+
 
 
 
  # ⚙️ Feature Engineering
 
- Additional analytical features were created from the original dataset.
+ Additional analytical features were created from the cleaned dataset to support deeper operational analysis.
+
+ ### 🔧 Feature Engineering Process
+
+
+Clean Analytical Data
+          │
+          ▼
+┌─────────────────────────┐
+│ Extract Order Hour      │
+│ from Timestamp          │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Calculate KDS SLA       │
+│ Compliance              │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Create Analytical       │
+│ Features                │
+└────────────┬────────────┘
+             │
+             ▼
+      📊 Analysis-Ready Data
+
+
+ ### 📌 Created Features
+
+ | Feature | Description | Purpose |
+| --- | --- | --- |
+| `order_hour` | Hour extracted from `order_timestamp` | 🕐 Identify peak operating hours |
+| `is_sub_second_sync` | Checks whether KDS sync is below 1 second | ⚡ Measure SLA compliance |
+
+
+
+
+
 
  ### 🧮 Feature Creation
 
