@@ -95,21 +95,57 @@ The main objective is to transform raw restaurant transaction data into **action
 
 The project focuses on three major operational areas:
 
-text
-┌─────────────────────────────────────────────────────────┐
-│                 GOURMET DINING ANALYTICS                │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│   ⚡ KDS PERFORMANCE                                    │
-│   └── Reduce order synchronization latency              │
-│                                                         │
-│   🍽️ OPERATIONAL EFFICIENCY                            │
-│   └── Improve order processing & table turnover         │
-│                                                         │
-│   💰 SALES PERFORMANCE                                  │
-│   └── Identify high-performing products & peak hours    │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+### ⚡ KDS PERFORMANCE
+
+**Reduce order synchronization latency**
+
+Improve communication between restaurant order stations and the Kitchen Display System.
+
+</td>
+
+<td align="center" width="33%">
+
+### 🍽️ OPERATIONAL EFFICIENCY
+
+**Improve order processing**
+
+Analyze order processing time, table turnover, and staff performance.
+
+</td>
+
+<td align="center" width="33%">
+
+### 💰 SALES PERFORMANCE
+
+**Analyze revenue & demand**
+
+Identify high-performing menu items, sales patterns, and peak operating hours.
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+### 🎯 Main Project Goal
+
+> **Transform restaurant transaction data into actionable insights that can improve operational efficiency, KDS performance, and sales management.**
+
+### 📌 Key Objectives
+
+- ⚡ **KDS Performance** — measure synchronization latency and SLA compliance.
+- 🍽️ **Operational Efficiency** — analyze order processing time and staff performance.
+- 💰 **Sales Performance** — identify revenue-generating menu items and categories.
+- 🕐 **Peak Hours** — determine periods of highest restaurant demand.
+- 📊 **KPI Monitoring** — create measurable indicators for management.
 
 
  # ❓ Key Questions
