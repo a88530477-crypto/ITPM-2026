@@ -5,7 +5,7 @@
 
 ### 📊 IT Project Management — Project 1
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
   <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
@@ -13,18 +13,19 @@
 </p>
 
 <p>
-  <strong>📈 Data-driven analysis of restaurant operations, sales performance, KDS synchronization and staff efficiency.</strong>
+  <strong>📈 Data-driven analysis of restaurant operations, sales performance, KDS synchronization, and staff efficiency.</strong>
 </p>
 
 <p>
   <a href="#-team-information">Team</a> •
   <a href="#-project-overview">Overview</a> •
   <a href="#-dataset-information">Dataset</a> •
-  <a href="#-objectives">Objectives</a> •
+  <a href="#-project-objectives">Objectives</a> •
   <a href="#-data-preparation">Data</a> •
-  <a href="#-analysis">Analysis</a> •
+  <a href="#-data-analysis">Analysis</a> •
   <a href="#-key-results">Results</a> •
-  <a href="#-timeline">Timeline</a>
+  <a href="#-kpi-dashboard">KPIs</a> •
+  <a href="#-project-timeline">Timeline</a>
 </p>
 
 </div>
@@ -35,10 +36,13 @@
 
 - [👥 Team Information](#-team-information)
 - [📌 Project Overview](#-project-overview)
-- [📊 Dataset Information](#-dataset-information)
 - [🎯 Project Objectives](#-project-objectives)
+- [❓ Key Questions](#-key-questions)
+- [📊 Dataset Information](#-dataset-information)
+- [💡 Expected Insights](#-expected-insights)
 - [🛠️ Data Preparation](#️-data-preparation)
 - [📈 Data Analysis](#-data-analysis)
+- [🎯 KPI Evaluation](#-kpi-evaluation)
 - [🔍 Key Results](#-key-results)
 - [📊 KPI Dashboard](#-kpi-dashboard)
 - [💼 Business Impact](#-business-impact)
@@ -46,10 +50,14 @@
 - [🧰 Technology Stack](#-technology-stack)
 - [📅 Project Timeline](#-project-timeline)
 - [🎓 Project Outcomes](#-project-outcomes)
+- [🐍 Pandas Skills Developed](#-pandas-skills-developed)
+- [📊 Automated Executive Report](#-automated-executive-report)
 - [📝 Conclusion](#-conclusion)
 - [📚 References](#-references)
 - [📎 Appendix](#-appendix)
 - [🚀 Future Improvements](#-future-improvements)
+- [⭐ Project Highlights](#-project-highlights)
+
 
 
 # 👥 Team Information
@@ -68,6 +76,7 @@
 > 👥 **Team:** Akbar_Team
 
 
+
 # 📌 Project Overview
 
 **Gourmet Dining LLC** is a restaurant operations analytics project focused on understanding and improving the efficiency of daily restaurant workflows.
@@ -75,35 +84,33 @@
 The project uses transactional and operational data to investigate:
 
 - 🍽️ Restaurant order performance
-- 
 - ⚡ Kitchen Display System (KDS) synchronization
-- 
 - 🕒 Order processing time
-- 
 - 👨‍🍳 Staff performance
-- 
 - 💰 Menu item revenue
-- 
 - 📊 Peak operating hours
-- 
-- 🔄 Table and order workflow efficiency
+- 🔄 Order workflow efficiency
 
-The main objective is to transform raw restaurant transaction data into **actionable business insights** using **Python, Pandas and PostgreSQL**.
+### 🎯 Main Goal
+
+> Transform raw restaurant transaction data into actionable insights that can support operational efficiency, KDS performance, and sales management.
+
 
 
 # 🎯 Project Objectives
 
-The project focuses on three major operational areas:
+The project focuses on three major operational areas.
 
 <div align="center">
 
 <table>
 <tr>
+
 <td align="center" width="33%">
 
-### ⚡ KDS PERFORMANCE
+## ⚡ KDS PERFORMANCE
 
-**Reduce order synchronization latency**
+### Reduce Synchronization Latency
 
 Improve communication between restaurant order stations and the Kitchen Display System.
 
@@ -111,33 +118,28 @@ Improve communication between restaurant order stations and the Kitchen Display 
 
 <td align="center" width="33%">
 
-### 🍽️ OPERATIONAL EFFICIENCY
+## 🍽️ OPERATIONAL EFFICIENCY
 
-**Improve order processing**
+### Improve Order Processing
 
-Analyze order processing time, table turnover, and staff performance.
+Analyze order processing time, workflow efficiency, and staff performance.
 
 </td>
 
 <td align="center" width="33%">
 
-### 💰 SALES PERFORMANCE
+## 💰 SALES PERFORMANCE
 
-**Analyze revenue & demand**
+### Analyze Revenue & Demand
 
 Identify high-performing menu items, sales patterns, and peak operating hours.
 
 </td>
+
 </tr>
 </table>
 
 </div>
-
----
-
-### 🎯 Main Project Goal
-
-> **Transform restaurant transaction data into actionable insights that can improve operational efficiency, KDS performance, and sales management.**
 
 ### 📌 Key Objectives
 
@@ -148,33 +150,35 @@ Identify high-performing menu items, sales patterns, and peak operating hours.
 - 📊 **KPI Monitoring** — create measurable indicators for management.
 
 
- # ❓ Key Questions
 
- ### 1️⃣ KDS Synchronization
+# ❓ Key Questions
 
- > Is the system meeting the required **sub-second synchronization target (\< 1 second)** between dining room order stations and kitchen displays?
+### 1️⃣ KDS Synchronization
 
- ### 2️⃣ Menu Performance
+> Is the system meeting the required **sub-second synchronization target (< 1 second)** between dining room order stations and kitchen displays?
 
- > Which menu items generate the highest revenue, and which items have lower sales performance?
+### 2️⃣ Menu Performance
 
- ### 3️⃣ Peak Operating Hours
+> Which menu items generate the highest revenue, and which items have lower sales performance?
 
- > What are the peak operating hours of the restaurant?
+### 3️⃣ Peak Operating Hours
 
- ### 4️⃣ Staff Efficiency
+> What are the peak operating hours of the restaurant?
 
- > How does order-processing efficiency vary across staff members and shifts?
+### 4️⃣ Staff Efficiency
+
+> How does order-processing efficiency vary across staff members and shifts?
 
 
- # 📊 Dataset Information
 
- ## 📁 Dataset
+# 📊 Dataset Information
 
- **Gourmet Dining Restaurant Transaction & Order Performance Dataset**
+## 📁 Dataset
 
- | Property | Description |
-| --- | --- |
+**Gourmet Dining Restaurant Transaction & Order Performance Dataset**
+
+| Property | Description |
+|---|---|
 | 🗄️ Source | PostgreSQL Production Database |
 | 📦 Records | **12,500 rows** |
 | 📊 Columns | **10 columns** |
@@ -182,11 +186,11 @@ Identify high-performing menu items, sales patterns, and peak operating hours.
 | 🐘 Database | PostgreSQL |
 | 🐍 Analysis | Python + Pandas |
 
-### Dataset Contains
+### 📋 Dataset Contains
 
- The dataset includes:
+The dataset includes:
 
- - 🆔 Order ID
+- 🆔 Order ID
 - 🪑 Table Number
 - 🕐 Order Timestamp
 - 📌 Order Status
@@ -198,12 +202,13 @@ Identify high-performing menu items, sales patterns, and peak operating hours.
 - ⏱️ Order Processing Time
 
 
- # 💡 Expected Insights
 
- The analysis is designed to provide:
+# 💡 Expected Insights
 
- | Area | Expected Insight |
-| --- | --- |
+The analysis is designed to provide:
+
+| Area | Expected Insight |
+|---|---|
 | ⚡ KDS | Synchronization latency and SLA compliance |
 | 🕒 Operations | Average order fulfillment time |
 | 📈 Sales | Revenue by item and category |
@@ -213,9 +218,11 @@ Identify high-performing menu items, sales patterns, and peak operating hours.
 | 🚨 Bottlenecks | Areas requiring optimization |
 
 
- # 🛠️ Data Preparation
 
- ## 1\. 📥 Loading the Dataset
+# 🛠️ Data Preparation
+
+## 1. 📥 Loading the Dataset
+
 
 import pandas as pd
 
@@ -228,11 +235,11 @@ print(df.info())
 
 
 
-## 2. 🧹 Data Cleaning
+ ## 2\. 🧹 Data Cleaning
 
-The dataset was cleaned to improve data quality and analytical reliability.
+ The dataset was cleaned to improve data quality and analytical reliability.
 
-### 📥 Cleaning Process
+ ### 🧹 Cleaning Process
 
 
 # Remove duplicate records
@@ -258,9 +265,7 @@ df["order_timestamp"] = pd.to_datetime(
 df["table_number"] = df["table_number"].astype(int)
 
 
-
-
-### 🧹 Data Cleaning Workflow
+ ### 🔄 Data Cleaning Workflow
 
 
 ┌──────────────────────────────┐
@@ -302,40 +307,28 @@ df["table_number"] = df["table_number"].astype(int)
  ### 🔧 Feature Engineering Process
 
 
-Clean Analytical Data
-          │
-          ▼
-┌─────────────────────────┐
-│ Extract Order Hour      │
-│ from Timestamp          │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Calculate KDS SLA       │
-│ Compliance              │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Create Analytical       │
-│ Features                │
-└────────────┬────────────┘
-             │
-             ▼
-      📊 Analysis-Ready Data
-
-
- ### 📌 Created Features
-
- | Feature | Description | Purpose |
-| --- | --- | --- |
-| `order_hour` | Hour extracted from `order_timestamp` | 🕐 Identify peak operating hours |
-| `is_sub_second_sync` | Checks whether KDS sync is below 1 second | ⚡ Measure SLA compliance |
-
-
-
-
+        Clean Analytical Data
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Extract Order Hour  │
+       │ from Timestamp      │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Calculate KDS SLA   │
+       │ Compliance          │
+       └──────────┬──────────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Create Analytical   │
+       │ Features            │
+       └──────────┬──────────┘
+                  │
+                  ▼
+          📊 Analysis-Ready Data
 
 
  ### 🧮 Feature Creation
@@ -354,8 +347,8 @@ df["is_sub_second_sync"] = (
 
  | Feature | Description | Purpose |
 | --- | --- | --- |
-| `order_hour` | Hour extracted from order timestamp | Identify peak operating hours |
-| `is_sub_second_sync` | Boolean SLA indicator | Measure KDS synchronization compliance |
+| `order_hour` | Hour extracted from `order_timestamp` | 🕐 Identify peak operating hours |
+| `is_sub_second_sync` | Boolean indicator for sync time below 1 second | ⚡ Measure KDS SLA compliance |
 
 
 
@@ -504,7 +497,7 @@ print(sales_pivot)
 │ 20:00          │   $    │   $    │   $    │   $    │
 └────────────────┴────────┴────────┴────────┴────────┘
 
-                      ORDER HOUR
+                       ORDER HOUR
 
 
 
@@ -553,7 +546,7 @@ KDS SLA TARGET
 
 ┌──────────────────────────────────────────┐
 │██████████████████████████████████████░░░│
-│                 96.4%                    │
+│                  96.4%                   │
 └──────────────────────────────────────────┘
 
 
@@ -652,7 +645,7 @@ KDS SLA TARGET
 
                  ┌──────────────────────┐
                  │   🐘 PostgreSQL DB   │
-                 │     Raw Data         │
+                 │      Raw Data        │
                  └──────────┬───────────┘
                             │
                             ▼
@@ -712,11 +705,11 @@ KDS SLA TARGET
 
  | Week | Date | Activities | Status |
 | --- | --- | --- | --- |
-| **Week 1** | 07 Sep – 13 Sep | Dataset search, PostgreSQL export setup, project planning | ✅ |
-| **Week 2** | 14 Sep – 20 Sep | Data cleaning, missing values, timestamp preparation | ✅ |
-| **Week 3** | 21 Sep – 27 Sep | Pandas analysis, KDS performance, visualization | ✅ |
-| **Week 4** | 28 Sep – 04 Oct | KPI aggregation, validation and interpretation | ✅ |
-| **Week 5** | 05 Oct – 13 Oct | Final report and presentation preparation | ✅ |
+| **Week 1** | 07 Sep – 13 Sep | Dataset search, PostgreSQL export setup, project planning | ✅ Completed |
+| **Week 2** | 14 Sep – 20 Sep | Data cleaning, missing values, timestamp preparation | ✅ Completed |
+| **Week 3** | 21 Sep – 27 Sep | Pandas analysis, KDS performance, visualization | ✅ Completed |
+| **Week 4** | 28 Sep – 04 Oct | KPI aggregation, validation and interpretation | ✅ Completed |
+| **Week 5** | 05 Oct – 13 Oct | Final report and presentation preparation | ✅ Completed |
 | 🎓 **Final Presentation** | **14 Oct** | Project presentation | 🎯 |
 
 
@@ -725,7 +718,7 @@ KDS SLA TARGET
 
  ## 🧠 Key Learnings
 
- The project provided practical experience in connecting:
+ The project provided practical experience in connecting business requirements with data analysis.
 
 
 Business Requirements
@@ -776,10 +769,11 @@ df.sort_values()
 
 pd.to_datetime()
 df.astype()
-df.dt.hour
+df["order_timestamp"].dt.hour
 
 
  ## 🔹 Analytical Operations
+
 
 df.groupby()
 pd.pivot_table()
@@ -830,19 +824,19 @@ def generate_daily_report(dataframe):
 
  The analysis focuses on three central areas:
 
- > ⚡ **KDS synchronization**\
->  🍽️ **Operational efficiency**\
->  💰 **Sales performance**
+ > ⚡ **KDS Synchronization**\
+>  🍽️ **Operational Efficiency**\
+>  💰 **Sales Performance**
 
  ### 📌 Main Findings
 
- - ⚡ **96.4%** of orders achieved sub-second KDS synchronization.
+ - ⚡ **96.4%** of analyzed orders achieved sub-second KDS synchronization.
 - ⏱️ Reported average KDS latency was **0.42 seconds**.
 - 🕒 Average order processing time was **11.8 minutes**.
 - 🍽️ Major demand periods were identified during **13:00–15:00** and **19:00–22:00**.
 - 🍕 The top **20% of menu items** accounted for more than **65% of total sales revenue**.
 
- The project demonstrates the complete process of transforming raw transactional data into structured KPIs and operational insights using **PostgreSQL and Pandas**.
+ Overall, the project demonstrates the complete process of transforming raw transactional data into structured KPIs and operational insights using **PostgreSQL, Python, and Pandas**.
 
 
 
@@ -858,8 +852,8 @@ def generate_daily_report(dataframe):
 
  ## 📖 Documentation
 
- - [Pandas Documentation](<https://pandas.pydata.org/docs/>)
-- [PostgreSQL Documentation](<https://www.postgresql.org/docs/>)
+ - [🐼 Pandas Documentation](<https://pandas.pydata.org/docs/>)
+- [🐘 PostgreSQL Documentation](<https://www.postgresql.org/docs/>)
 
 
 
@@ -927,8 +921,15 @@ Gourmet-Dining-Analytics/
 
  **IT Project Management — Project 1**
 
- \<br\> 🐍 **Python** • 🐼 **Pandas** • 🐘 **PostgreSQL**
+ 🐍 **Python** • 🐼 **Pandas** • 🐘 **PostgreSQL**
 
- \<br\> ⭐ **Thank you for visiting our project!**
 
- \</div\>
+
+ ⭐ **Thank you for visiting our project!**
+
+ \</div\> \`\`\` 
+
+
+- ✅ Все ссылки оформлены нормально для GitHub.
+- ✅ Код стал копируемым и подсвечивается синтаксисом Python.
+- ✅ Финальная часть README теперь выглядит как полноценная презентационная страница проекта.
