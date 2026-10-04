@@ -265,8 +265,8 @@ df["order_timestamp"] = pd.to_datetime(
 df["table_number"] = df["table_number"].astype(int)
 
 
- ### 🔄 Data Cleaning Workflow
 
+### 🔄 Data Cleaning Workflow
 
 ┌──────────────────────────────┐
 │         📥 RAW DATA          │
@@ -296,7 +296,6 @@ df["table_number"] = df["table_number"].astype(int)
 ┌──────────────────────────────┐
 │   📊 Clean Analytical Data   │
 └──────────────────────────────┘
-
 
 
 
