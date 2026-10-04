@@ -267,36 +267,13 @@ df["table_number"] = df["table_number"].astype(int)
 
 
 ### 🔄 Data Cleaning Workflow
-
-┌──────────────────────────────┐
-│         📥 RAW DATA          │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│    🔄 Remove Duplicates      │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│    🧹 Handle Missing Values  │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│    ✅ Validate Required Data │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│     🔧 Convert Data Types    │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│   📊 Clean Analytical Data   │
-└──────────────────────────────┘
-
+mermaid
+flowchart TD
+    A["📥 RAW DATA"] --> B["🔄 Remove Duplicates"]
+    B --> C["🧹 Handle Missing Values"]
+    C --> D["✅ Validate Required Data"]
+    D --> E["🔧 Convert Data Types"]
+    E --> F["📊 Clean Analytical Data"]
 
 
  # ⚙️ Feature Engineering
