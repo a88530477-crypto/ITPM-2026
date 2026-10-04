@@ -268,7 +268,7 @@ df["table_number"] = df["table_number"].astype(int)
 
 ### 🔄 Data Cleaning Workflow
 
-```mermaid
+mermaid
 flowchart TD
     A["📥 Raw Data"] --> B["🔄 Remove Duplicates"]
     B --> C["🧹 Handle Missing Values"]
