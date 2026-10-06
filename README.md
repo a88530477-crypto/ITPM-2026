@@ -73,7 +73,7 @@
 
 > 🏫 **Course:** IT Project Management
 > 📚 **Project:** Project 1
-> 👥 **Team:** Akbar_Team
+> 👥 **Team:** BOOST
 
 
 
