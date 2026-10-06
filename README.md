@@ -509,20 +509,12 @@ $$
 
 ## ⚡ KDS Synchronization
 
-### **96.4%**
+### 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **96.4%**
 
-of analyzed orders were synchronized with the Kitchen Display System in under **1 second**.
+**96.4%** of analyzed orders were synchronized with the Kitchen Display System in under **1 second**.
 
-**KDS SLA TARGET:** `< 1.0 second`
-
-┌──────────────────────────────────────────┐
-│██████████████████████████████████████░░░░│
-│                 96.4%                    │
-└──────────────────────────────────────────┘
-
- ### 📊 Reported Average Latency
-
- **0.42 seconds**
+* **KDS SLA Target:** `< 1.0 second`
+* **Average Latency:** `0.42 seconds`
 
 
 
