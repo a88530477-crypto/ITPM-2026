@@ -819,9 +819,9 @@ def generate_daily_report(dataframe):
 
  # 📎 Appendix
 
- ## 📁 Recommended Project Structure
+## 📁 Recommended Project Structure
 
-
+```text
 Gourmet-Dining-Analytics/
 │
 ├── 📄 README.md
