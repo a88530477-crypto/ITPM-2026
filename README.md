@@ -507,21 +507,18 @@ $$
 
  > 📌 The following figures represent the results stated in the project analysis.
 
- ## ⚡ KDS Synchronization
+## ⚡ KDS Synchronization
 
- ### **96.4%**
+### **96.4%**
 
- of analyzed orders were synchronized with the Kitchen Display System in under **1 second**.
+of analyzed orders were synchronized with the Kitchen Display System in under **1 second**.
 
-
-KDS SLA TARGET
-< 1.0 second
+**KDS SLA TARGET:** `< 1.0 second`
 
 ┌──────────────────────────────────────────┐
-│██████████████████████████████████████░░░│
-│                  96.4%                   │
+│██████████████████████████████████████░░░░│
+│                 96.4%                    │
 └──────────────────────────────────────────┘
-
 
  ### 📊 Reported Average Latency
 
