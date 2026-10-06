@@ -865,14 +865,11 @@ Gourmet-Dining-Analytics/
 
 
 
- # ⭐ Project Highlights
+# ⭐ Project Highlights
 
- <div align="center"\> | 📊 Dataset | ⚡ KDS SLA | 🕒 Avg. Processing | 🍕 Revenue Concentration |
-| --- | --- | --- | --- |
-| **12,500** | **96.4%** | **11.8 min** | **65%+** |
-| Records | `< 1 sec` | `< 15 min` | Top 20% Items |
-
-</div\>
+| 📊 Dataset | ⚡ KDS SLA | 🕒 Avg. Processing | 🍕 Revenue Concentration |
+| :---: | :---: | :---: | :---: |
+| **12,500**<br><sub>Records</sub> | **96.4%**<br><sub>`< 1 sec`</sub> | **11.8 min**<br><sub>`< 15 min`</sub> | **65%+**<br><sub>Top 20% Items</sub> |
 
 
  <div align="center"\> # 🍽️ Gourmet Dining LLC
