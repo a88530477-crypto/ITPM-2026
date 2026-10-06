@@ -542,17 +542,15 @@ $$
 
 
 
- # 📊 KPI Dashboard
+# 📊 KPI Dashboard
 
- \<div align="center"\> | 📌 KPI | 🎯 Target | 📈 Actual | Status |
-| --- | --- | --- | --- |
-| ⚡ KDS Sync Latency | `< 1.0 sec` | **0.42 sec** | 🟢 Passed |
-| ⏱️ Order Processing Time | `< 15 min` | **11.8 min** | 🟢 Passed |
-| 💰 Daily Sales Export | Automated | **Implemented** | 🟢 Passed |
-| 📦 Dataset Size | — | **12,500 rows** | 🔵 Analyzed |
-| 🐍 Data Analysis | Pandas | **Completed** | 🟢 Done |
-
-\</div\>
+| 📌 KPI | 🎯 Target | 📈 Actual | Status |
+| :--- | :---: | :---: | :---: |
+| ⚡ **KDS Sync Latency** | `< 1.0 sec` | **0.42 sec** | 🟢 Passed |
+| ⏱️ **Order Processing Time** | `< 15 min` | **11.8 min** | 🟢 Passed |
+| 💰 **Daily Sales Export** | `Automated` | **Implemented** | 🟢 Passed |
+| 📦 **Dataset Size** | — | **12,500 rows** | 🔵 Analyzed |
+| 🐍 **Data Analysis** | `Pandas` | **Completed** | 🟢 Done |
 
 
  # 💼 Business Impact
